@@ -1,0 +1,26 @@
+;
+; BIND data file for corp.gradebook.pi
+;
+$TTL	604800
+@	IN	SOA	behemoth.corp.gradebook.pi.  root.gradebook.pi. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+; NS Records
+corp.gradebook.pi.	IN	NS	behemoth.corp.gradebook.pi.
+; A Record for Name Servers
+behemoth		IN	A	172.23.7.1
+
+;MX Records
+corp.gradebook.pi.	IN	MX	10 mail.corp.gradebook.pi.
+
+;A Records
+www			IN	A	172.23.7.4
+mail			IN	A	172.23.7.3
+
+
+@	IN	NS	localhost.
+@	IN	A	127.0.0.1
+@	IN	AAAA	::1

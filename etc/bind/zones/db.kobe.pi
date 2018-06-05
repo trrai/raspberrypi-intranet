@@ -1,0 +1,23 @@
+;
+; BIND data file for kobe.pi public zone
+;
+$TTL    604800
+kobe.pi.       IN      SOA     ns1.kobe.pi. hostmaster.kobe.pi. (
+                     2018053102         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; NS Records
+kobe.pi.      IN      NS      ns1.kobe.pi.
+
+; A Record for Name Severs
+ns1             IN      A       172.23.23.130
+
+; MX Server Records
+kobe.pi.      IN      MX      10 mail.kobe.pi.
+
+; A Records
+@                       IN      A       172.23.23.133
+www                     IN      A       172.23.23.132
+mail                    IN      A       172.23.23.131

@@ -1,0 +1,23 @@
+;
+; BIND data file for corp.kobe.pi private zone
+;
+$TTL    604800
+corp.kobe.pi. IN      SOA     kobe.corp.kobe.pi. hostmaster.corp.kobe.pi. (
+                     2018053101         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; NS Records
+corp.kobe.pi. IN      NS      kobe.corp.kobe.pi.
+
+; A Record for Name Severs
+kobe            IN      A       172.23.23.1
+
+; MX Server Records
+corp.kobe.pi. IN      MX      10 mail.corp.kobe.pi.
+
+; A Records
+mail                    IN      A       172.23.23.66
+
+

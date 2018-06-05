@@ -1,0 +1,28 @@
+view "internal"{
+match-clients { localhost; 172.23.23.0/24; };
+recursion yes;
+allow-query {any;};
+
+zone "corp.kobe.pi" IN {
+type master;
+file "/etc/bind/zones/db.corp.kobe.pi";
+};
+zone "kobe.pi" IN {
+type master;
+file "/etc/bind/zones/db.kobe.pi";
+};
+
+};
+
+view "external"{
+match-clients {any;};
+recursion no;
+allow-query {any;};
+
+zone "kobe.pi" IN {
+type master;
+file "/etc/bind/zones/db.kobe.pi";
+};
+
+
+};

@@ -1,0 +1,3 @@
+auto dummy0
+iface dummy0 inet static
+address 172.23.23.130/32
