@@ -1,0 +1,5 @@
+auto wlan0
+allow-hotplug wlan0
+
+iface wlan0 inet static
+   address 172.23.20.1/26

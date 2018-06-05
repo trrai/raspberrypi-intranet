@@ -1,0 +1,22 @@
+;
+; BIND data file for corp.harden.pi private zone
+;
+$TTL	604800
+corp.harden.pi.	IN	SOA	odin.corp.harden.pi. hostmaster.corp.harden.pi. (
+		     2018053101		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+; NS Records
+corp.harden.pi.	IN	NS	odin.corp.harden.pi.
+
+; A Record for Name Severs
+odin		IN	A	172.23.20.1
+
+; MX Server Records 
+corp.harden.pi.	IN	MX	10 mail.corp.harden.pi.
+
+; A Records
+www			IN	A	172.23.20.5
+mail			IN	A	172.23.20.6

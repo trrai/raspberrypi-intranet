@@ -1,0 +1,41 @@
+view "internal" {
+	match-clients { localhost; 172.23.20.0/24; };
+	recursion yes;
+	allow-query { localhost; 172.23.20.0/24; };
+
+	zone "corp.harden.pi" IN {
+		type master;
+		file "/etc/bind/zones/db.corp.harden.pi";
+		allow-transfer { none; };
+	};
+
+	zone "harden.pi" IN {
+                type master;
+                file "/etc/bind/zones/db.harden.pi";
+                allow-transfer { none; };
+        };
+
+	zone "pi" IN {
+//		type slave;
+//		file "/etc/bind/zones/db.pi";
+//		masters { 10.10.10.10; };
+type forward;
+forwarders { 10.10.10.10; };
+	};
+
+
+	include "/etc/bind/named.conf.default-zones";
+};
+
+view "external" {
+	match-clients { any; };
+	recursion no;
+	allow-query { any; };	
+
+	zone "harden.pi" IN {
+		type master;
+		file "/etc/bind/zones/db.harden.pi";
+		allow-transfer { none; };
+	};
+};
+

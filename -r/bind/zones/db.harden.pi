@@ -1,0 +1,23 @@
+;
+; BIND data file for harden.pi public zone
+;
+$TTL	604800
+harden.pi.	IN	SOA	ns1.harden.pi. hostmaster.harden.pi. (
+		     2018053102		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+; NS Records
+harden.pi.	IN	NS	ns1.harden.pi.
+
+; A Record for Name Severs
+ns1		IN	A	172.23.20.130
+
+; MX Server Records 
+harden.pi.	IN	MX	10 mail.harden.pi.
+
+; A Records
+@			IN	A	172.23.20.133
+www			IN	A	172.23.20.132
+mail			IN	A	172.23.20.131
