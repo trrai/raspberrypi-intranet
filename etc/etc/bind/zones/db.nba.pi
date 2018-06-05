@@ -1,0 +1,15 @@
+;
+; BIND data file for corp.nba.pi public zone
+;
+$TTL	604800
+nba.pi.	IN	SOA	ns1.nba.pi. hostmaster.nba.pi. (
+	      201806032		; Serial
+		 604800		; Refresh
+		  86400		; Retry
+		2419200		; Expire
+		 604800 )	; Negative Cache TTL
+;
+nba.pi.		IN	NS	ns1.nba.pi.
+ns1		IN	A	172.23.21.130
+nba.pi.		IN	MX	10 mail.nba.pi.
+mail.nba.pi.	IN	A	172.23.21.130

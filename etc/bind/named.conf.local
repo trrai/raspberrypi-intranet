@@ -1,0 +1,32 @@
+view "internal" {
+	match-clients { localhost; 172.23.21.0/24; };
+	recursion yes;
+	allow-query { any; };
+	zone "corp.nba.pi" IN {
+		type master;
+		file "/etc/bind/zones/db.corp.nba.pi";
+	};
+
+	zone "nba.pi" IN {
+                type master;
+                file "/etc/bind/zones/db.nba.pi";
+        };
+	
+	zone "pi" IN {
+		type slave;
+		masters { 10.10.10.10; };
+	};
+
+};
+
+view "external" {
+	match-clients { any; };
+	recursion no;
+	allow-query { any; };
+
+	zone "nba.pi" IN {
+		type master;
+		file "/etc/bind/zones/db.nba.pi";
+	};
+};
+

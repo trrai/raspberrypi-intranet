@@ -1,0 +1,121 @@
+@                       3600	   IN      SOA	    a.gtld-servers.pi. hostmaster.gtld-servers.pi. (
+                                                    2018060402	; serial YYYYMMDDnn
+                                                    86400		; refresh (  24 hours)
+                                                    3600		; retry   (   1 hour)
+                                                    3600000		; expire  (1000 hours)
+                                                    3600 )		; minimum (   1 hour)
+;
+pi.                 86400	IN	NS	    a.gtld-servers.pi.
+gtld-servers.pi.	    86400	IN	NS	    a.gtld-servers.pi.
+a.gtld-servers.pi.	    86400	IN	A	    10.10.10.10
+;
+gradebook.pi.		    900	    IN	NS	    ns1.gradebook.pi.
+ns1.gradebook.pi.	    900	    IN	A	    172.23.7.130
+;
+gigabits.pi.		    900	    IN  NS	    ns1.gigabits.pi.
+ns1.gigabits.pi.	    900	    IN	A	    172.23.0.130
+;
+evilbits.pi.        900     IN  NS      n.evilbits.pi.
+n.evilbits.pi.        900     IN  A     172.23.1.1
+;
+megabits.pi.        900     IN  NS      ns1.megabits.pi.
+ns1.megabits.pi.      900     IN  A     172.23.2.130
+;
+kilobits.pi.        900     IN  NS      ns1.kilobits.pi.
+ns1.kilobits.pi.      900     IN  A     172.23.3.130
+;
+lodge.pi.           900     IN  NS      ns1.lodge.pi.
+ns1.lodge.pi.         900     IN  A     172.23.8.130
+;
+strawberry.pi.      900     IN  NS      ns1.strawberry.pi.
+ns1.strawberry.pi.    900     IN  A     172.23.12.130
+;
+huckleberry.pi.     900     IN  NS      ns1.huckleberry.pi.
+ns1.huckleberry.pi.   900     IN  A     171.23.13.130
+;
+gojiberry.pi.       900     IN  NS      ns1.gojiberry.pi.
+ns1.gojiberry.pi.     900     IN  A     172.23.14.130
+;
+blueberry.pi.       900     IN  NS      ns1.blueberry.pi.
+ns1.blueberry.pi.     900     IN  A     172.23.15.130
+;
+khloe.pi.           900     IN  NS      ns1.khloe.pi.
+ns1.khloe.pi.         900     IN  A     172.23.16.130
+;
+kourtney.pi.        900     IN  NS      ns1.kourtney.pi.
+ns1.kourtney.pi.      900     IN  A     172.23.17.130
+;
+kim.pi.             900     IN  NS      ns1.kim.pi.
+ns1.kim.pi.           900     IN  A     172.23.18.130
+;
+harden.pi.          900     IN  NS      ns1.harden.pi.
+ns1.harden.pi.        900     IN  A     172.23.20.130
+;
+nba.pi.          900     IN  NS         ns1.nba.pi.
+ns1.nba.pi.        900     IN  A        172.23.21.130
+;
+illuminati.pi.      900     IN  NS      ns1.illuminati.pi.
+ns1.illuminati.pi.    900     IN  A     172.23.32.130
+;
+homemadeapplepi.pi. 900     IN  NS      ns1.homemadeapplepi.pi.
+ns1.homemadeapplepi.pi. 900   IN  A     172.23.35.130
+;
+jm.pi.              900     IN  NS      ns1.jm.pi.
+ns1.jm.pi.            900     IN  A     172.23.36.130
+;
+mv.pi.              900     IN  NS      ns1.mv.pi.
+ns1.mv.pi.            900     IN  A     172.23.37.130
+;
+sc.pi.              900     IN  NS      ns1.sc.pi.
+ns1.sc.pi.            900     IN  A     172.23.38.130
+;
+ln.pi.              900     IN  NS      ns1.ln.pi.
+ns1.ln.pi.            900     IN  A     172.23.39.130
+;
+yummy.pi.           900     IN  NS      ns1.yummy.pi.
+ns1.yummy.pi.         900     IN  A     172.23.10.130
+;
+luke.pi.            900     IN  NS      ns1.luke.pi.
+ns1.luke.pi.          900     IN  A     172.23.11.130
+;
+howl.pi.            900     IN  NS      ns1.howl.pi.
+ns1.howl.pi.          900     IN  A     172.23.42.130
+;
+noface.pi.          900     IN  NS      ns1.noface.pi.
+ns1.noface.pi.        900     IN  A     172.23.43.130
+;
+GroupI-ISP.pi.      900     IN  NS      ns1.GroupI-ISP.pi.
+ns1.GroupI-ISP.pi.    900     IN  A     172.23.40.130
+;
+keylime.pi.         900     IN  NS      ns1.keylime.pi.
+ns1.keylime.pi.       900     IN  A     172.23.9.130
+;
+guardiansofthe.pi.  900     IN  NS      ns1.guardiansofthepi.pi.
+ns1.guardiansofthepi.pi. 900  IN  A     172.23.33.130
+;
+cutie.pi.           900     IN  NS      ns1.cutie.pi.
+ns1.cutie.pi.         900     IN  A     172.23.29.130
+;
+qt.pi.              900     IN  NS      ns1.qt.pi.
+ns1.qt.pi.            900     IN  A     172.23.30.130
+;
+qTea.pi.            900     IN  NS      ns1.qTea.pi.
+ns1.qTea.pi.          900     IN  A     172.23.31.130
+;
+havarti.pi.         900     IN  NS      ns1.havarti.pi.
+ns1.havarti.pi.       900     IN  A     172.23.24.130
+;
+pepperjack.pi.      900     IN  NS      ns1.pepperjack.pi.
+ns1.pepperjack.pi.    900     IN  A     172.23.25.130
+;
+cheddar.pi.         900     IN  NS      ns1.cheddar.pi.
+ns1.cheddar.pi.       900     IN  A     172.23.26.130
+;
+gruyere.pi.         900     IN  NS      ns1.gruyere.pi.
+ns1.gruyere.pi.       900     IN  A     172.23.27.130
+;
+kobe.pi.            900     IN  NS      ns1.kobe.pi.
+ns1.kobe.pi.          900     IN  A     172.23.23.130
+;
+shaq.pi.            900     IN  NS      ns1.shaq.pi.
+ns1.shaq.pi.          900     IN  A     172.23.22.130

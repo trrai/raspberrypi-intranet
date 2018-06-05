@@ -1,0 +1,14 @@
+;
+; BIND data file for corp.nba.pi private zone
+;
+$TTL	604800
+corp.nba.pi.	IN	SOA	lebron.corp.nba.pi. hostmaster.corp.nba.pi. (
+	      201805292		; Serial
+		 604800		; Refresh
+		  86400		; Retry
+		2419200		; Expire
+		 604800 )	; Negative Cache TTL
+;
+corp.nba.pi.	IN	NS	lebron.corp.nba.pi.
+lebron		IN	A	172.23.21.1
+

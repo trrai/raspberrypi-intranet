@@ -1,0 +1,8 @@
+auto eth0
+allow-hotplug eth0
+iface eth0 inet static
+	address 172.23.21.1
+	netmask 255.255.252.0	
+iface eth0 inet6 auto
+  privext 0
+  accept_ra 2
