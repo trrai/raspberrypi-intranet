@@ -1,0 +1,17 @@
+;
+; BIND data file for shaq.pi public zone 
+;
+$TTL	604800
+shaq.pi.	IN	SOA	ns1.shaq.pi. hostmaster.shaq.pi. (
+		        20180605	; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+shaq.pi.	IN	NS	ns1.shaq.pi.
+ns1	        IN	A       172.23.22.130
+
+shaq.pi.    IN	MX      10 mail.shaq.pi.
+mail            IN      A       172.23.22.131
+

@@ -1,0 +1,47 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+
+view "internal" {
+        match-clients { localhost; 172.23.22.0/24; };
+        recursion yes;
+        allow-query { localhost; 172.23.22.0/24; };
+
+        zone "corp.shaq.pi" IN {
+                type master;
+                file "/etc/bind/zones/db.corp.shaq.pi";
+                allow-transfer { none; };
+        };
+
+        zone "shaq.pi" IN {
+                type master;
+                file "/etc/bind/zones/db.shaq.pi";
+                allow-transfer { none; };
+        };
+
+        zone "pi" IN {
+//              type slave;
+//              file "/etc/bind/zones/db.pi";
+//              masters { 10.10.10.10; };
+type forward;
+forwarders { 10.10.10.10; };
+        };
+
+
+        include "/etc/bind/named.conf.default-zones";
+};
+
+view "external" {
+        match-clients { any; };
+        recursion no;
+        allow-query { any; };
+
+        zone "shaq.pi" IN {
+                type master;
+                file "/etc/bind/zones/db.shaq.pi";
+                allow-transfer { none; };
+        };
+};

@@ -1,0 +1,18 @@
+;
+; BIND data file for corp.shaq.pi private zone 
+;
+$TTL	604800
+corp.shaq.pi.	IN	SOA	shaq.corp.shaq.pi. hostmaster.corp.shaq.pi. (
+		        20180604	; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+corp.shaq.pi.	IN	NS	shaq.corp.shaq.pi.
+shaq	        IN	A       172.23.22.1
+
+corp.shaq.pi.    IN	MX      10 mail.corp.shaq.pi.
+
+www		IN	A	172.23.22.24
+mail            IN      A       172.23.22.23
